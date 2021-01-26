@@ -1,0 +1,11 @@
+<div class="react-cookie-plugin"></div>
+
+<script type="text/babel" src="wp-content/plugins/cookie-plugin/components/CookiePlugin.js"></script>
+
+<script type="text/babel">
+  var cookie = Cookies.get("myCookieFromCookiePlugin");
+  var declineCookie = Cookies.get("declineCookie");
+  if (!cookie && !declineCookie) {
+    ReactDOM.render(<CookiePlugin />, document.querySelector(".react-cookie-plugin"));
+  }
+</script>
